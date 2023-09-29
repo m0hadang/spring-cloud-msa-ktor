@@ -12,9 +12,9 @@ spring:
     name: api-gateway-service
   cloud:
     gateway:
-      routes: # ?? ??
+      routes: # 맵핑 정보
         - id: first-service
-          # /first-service/** ? ??? http://localhost:8081/ ? ???
+          # /first-service/** 로 요청시 http://localhost:8081/ 로 라우팅
           uri: http://localhost:8081/
           predicates:
             - Path=/first-service/**
