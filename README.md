@@ -8,6 +8,8 @@
 
 프로젝트 빌드
 - `gradle build`
+- 빌드 후 생성된 자바 파일을 직접 실행
+  - `java -jar '-Dserver.port=9004' .\build\libs\user-service-0.0.1-SNAPSHOT.jar`
 
 프로젝트 실행
 - `gradle run`
