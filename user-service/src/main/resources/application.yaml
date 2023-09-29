@@ -1,1 +1,11 @@
-
+server:
+  port: 9001
+spring:
+  application:
+    name: user-service
+eureka:
+  client:
+    register-with-eureka: true # Eureka 서버에 자신을 등록
+    fetch-registry: true # Eureka 서버에서 인스턴스들의 정보를 주기적으로 가져옴
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/ # Eureka 서버의 주소
