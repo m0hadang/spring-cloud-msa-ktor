@@ -12,9 +12,12 @@ class FilterConfig {
         return builder.routes()
             .route { r ->
                 r.path("/first-service/**").filters { filter ->
+                    // 요청 헤더에 first-request 값은 first-request-header로 설정
+                    // 응답 헤더에 first-response 값은 first-response-header로 설정
                     filter
                         .addRequestHeader("first-request", "first-request-header")
                         .addResponseHeader("first-response", "first-response-header")
+
                 }
                     .uri("http://localhost:8081")
             }
