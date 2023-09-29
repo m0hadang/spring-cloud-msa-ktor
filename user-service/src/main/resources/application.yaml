@@ -5,6 +5,9 @@ spring:
   application:
     name: user-service
 eureka:
+  instance:
+    # Eureka 관리자 페이지에서 보여지게 될 서비스의 이름
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
   client:
     register-with-eureka: true # Eureka 서버에 자신을 등록
     fetch-registry: true # Eureka 서버에서 인스턴스들의 정보를 주기적으로 가져옴
