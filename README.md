@@ -34,3 +34,6 @@ Gradle 인자 사용
 server:
   port: ${port:9001}
 ```
+
+# 주의
+Spring Boot 사용시 패키지 경로 주의 : 다른 패키지에 Config, Bean, Controller 등록시 Spring Boot에서 해당 컴포넌트를 탐색하지 못하게 된다.
