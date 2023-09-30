@@ -4,6 +4,7 @@ import com.example.userservice.dto.UserDto
 import com.example.userservice.service.UserService
 import com.example.userservice.vo.Greeting
 import com.example.userservice.vo.RequestUser
+import com.example.userservice.vo.ResponseUser
 import org.modelmapper.ModelMapper
 import org.modelmapper.convention.MatchingStrategies
 import org.springframework.core.env.Environment
@@ -30,12 +31,14 @@ class UserController(
     }
 
     @PostMapping("/user")
-    fun createUser(@RequestBody user: RequestUser): ResponseEntity<Any> {
+    fun createUser(@RequestBody user: RequestUser): ResponseEntity<ResponseUser> {
         val mapper = ModelMapper();
         mapper.configuration.setMatchingStrategy(MatchingStrategies.STRICT)
 
         val userDto = mapper.map(user, UserDto::class.java)
         userService.createUser(userDto)
-        return ResponseEntity(HttpStatus.CREATED)
+
+        val responseUser = mapper.map(userDto, ResponseUser::class.java)
+        return ResponseEntity.status(HttpStatus.CREATED).body(responseUser)
     }
 }
