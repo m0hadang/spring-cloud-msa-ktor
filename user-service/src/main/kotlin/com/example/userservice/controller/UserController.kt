@@ -19,19 +19,19 @@ class UserController(
     private val greeting: Greeting,
     private val userService: UserService,
 ) {
-    @GetMapping("/health_check")
+    @GetMapping("/user-service/health_check")
     fun HealthCheck(): String {
         return "It's working in user service on PORT : " +
                 "${env.getProperty("local.server.port")}"
     }
 
-    @GetMapping("/welcome")
+    @GetMapping("/user-service/welcome")
     fun Welcome(): String {
 //        return env.getProperty("greeting.message").toString()
         return greeting.message
     }
 
-    @PostMapping("/user")
+    @PostMapping("/user-service/user")
     fun createUser(@RequestBody user: RequestUser): ResponseEntity<ResponseUser> {
         val mapper = ModelMapper();
         mapper.configuration.setMatchingStrategy(MatchingStrategies.STRICT)
