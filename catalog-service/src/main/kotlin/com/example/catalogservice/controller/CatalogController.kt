@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/catalog-service")
 class CatalogController(
     val env: Environment,
     private val catalogService: CatalogService,
 ) {
-    @GetMapping("/catalog-service/health_check")
+    @GetMapping("/health_check")
     fun HealthCheck(): String {
         return "It's working in user service on PORT : " +
                 "${env.getProperty("local.server.port")}"
     }
-    @GetMapping("/catalog-service/catalogs")
+    @GetMapping("/catalogs")
     fun getCatalogs(): ResponseEntity<List<ResponseCatalog>> {
         val catalogList = catalogService.getAllCatalogs()
         val result = catalogList.map { it ->
