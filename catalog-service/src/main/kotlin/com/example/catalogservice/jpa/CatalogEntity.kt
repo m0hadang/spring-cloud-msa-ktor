@@ -1,4 +1,4 @@
-package com.example.catalog.jpa
+package com.example.catalogservice.jpa
 
 import jakarta.persistence.*
 import org.hibernate.annotations.ColumnDefault

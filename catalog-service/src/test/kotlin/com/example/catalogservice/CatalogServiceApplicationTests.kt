@@ -1,10 +1,10 @@
-package com.example.catalog
+package com.example.catalogservice
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class CatalogApplicationTests {
+class CatalogServiceApplicationTests {
 
     @Test
     fun contextLoads() {

@@ -1,7 +1,7 @@
-package com.example.catalog.service
+package com.example.catalogservice.service
 
-import com.example.catalog.jpa.CatalogEntity
-import com.example.catalog.jpa.CatalogRepository
+import com.example.catalogservice.jpa.CatalogEntity
+import com.example.catalogservice.jpa.CatalogRepository
 import org.springframework.stereotype.Service
 
 @Service

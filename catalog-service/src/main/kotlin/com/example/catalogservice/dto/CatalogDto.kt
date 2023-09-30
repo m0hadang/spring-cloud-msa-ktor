@@ -1,4 +1,4 @@
-package com.example.catalog.dto
+package com.example.catalogservice.dto
 
 data class CatalogDto (
     var productId: String = "",

@@ -1,6 +1,6 @@
-package com.example.catalog.controller
+package com.example.catalogservice.controller
 
-import com.example.catalog.service.CatalogService
+import com.example.catalogservice.service.CatalogService
 import com.example.catalog.vo.ResponseCatalog
 import org.modelmapper.ModelMapper
 import org.springframework.core.env.Environment

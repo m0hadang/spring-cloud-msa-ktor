@@ -1,11 +1,11 @@
-package com.example.catalog
+package com.example.catalogservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class CatalogApplication
+class CatalogServiceApplication
 
 fun main(args: Array<String>) {
-    runApplication<CatalogApplication>(*args)
+    runApplication<CatalogServiceApplication>(*args)
 }
