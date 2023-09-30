@@ -15,6 +15,6 @@ data class UserEntity(
     var name: String = "",
     @Column(nullable = false, unique = true)
     var userId: String = "",
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     var encryptedPwd: String = "",
 )
