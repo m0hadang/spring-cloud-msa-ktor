@@ -19,14 +19,14 @@ class UserController(
     private val greeting: Greeting,
     private val userService: UserService,
 ) {
-    @GetMapping("/health_check")
-    fun HealthCheck(): String {
+    @GetMapping("/hello")
+    fun hello(): String {
         return "It's working in user service on PORT : " +
                 "${env.getProperty("local.server.port")}"
     }
 
     @GetMapping("/welcome")
-    fun Welcome(): String {
+    fun welcome(): String {
 //        return env.getProperty("greeting.message").toString()
         return greeting.message
     }

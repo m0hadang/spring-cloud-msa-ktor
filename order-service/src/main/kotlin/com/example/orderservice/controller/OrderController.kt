@@ -17,8 +17,8 @@ class OrderController(
     val env: Environment,
     private val orderService: OrderService,
 ) {
-    @GetMapping("/health_check")
-    fun HealthCheck(): String {
+    @GetMapping("/hello")
+    fun hello(): String {
         return "It's working in user service on PORT : " +
                 "${env.getProperty("local.server.port")}"
     }
