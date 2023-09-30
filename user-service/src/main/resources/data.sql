@@ -1,6 +1,6 @@
-insert into users(name, email, user_id, encrypted_pwd)
-    values ('user1', 'test123@test.com', '1111', '12345');
-insert into users(name, email, user_id, encrypted_pwd)
-    values ('user2', 'test2@test.com', '2222', 'a!@#ASD');
-insert into users(name, email, user_id, encrypted_pwd)
-    values ('user3', 'test3@test.com', '3333', 'ASDZXCw');
+insert into users(user_id, name, email, encrypted_pwd)
+    values ('1', 'user1', 'user1@test.com','12345');
+insert into users(user_id, name, email, encrypted_pwd)
+    values ('2', 'user2', 'user2@test.com','12345');
+insert into users(user_id, name, email, encrypted_pwd)
+    values ('3', 'user3', 'user3@test.com','12345');
