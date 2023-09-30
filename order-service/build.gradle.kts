@@ -29,6 +29,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.h2database:h2")
+    implementation("org.modelmapper:modelmapper:3.1.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
