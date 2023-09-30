@@ -21,7 +21,8 @@ class UserController(
 ) {
     @GetMapping("/health_check")
     fun HealthCheck(): String {
-        return "It's working in user service"
+        return "It's working in user service on PORT : " +
+                "${env.getProperty("local.server.port")}"
     }
 
     @GetMapping("/welcome")
