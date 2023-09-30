@@ -7,6 +7,8 @@ import com.example.userservice.vo.RequestUser
 import org.modelmapper.ModelMapper
 import org.modelmapper.convention.MatchingStrategies
 import org.springframework.core.env.Environment
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -28,12 +30,12 @@ class UserController(
     }
 
     @PostMapping("/user")
-    fun createUser(@RequestBody user: RequestUser): String {
+    fun createUser(@RequestBody user: RequestUser): ResponseEntity<Any> {
         val mapper = ModelMapper();
         mapper.configuration.setMatchingStrategy(MatchingStrategies.STRICT)
 
         val userDto = mapper.map(user, UserDto::class.java)
         userService.createUser(userDto)
-        return "Create user method is called"
+        return ResponseEntity(HttpStatus.CREATED)
     }
 }
