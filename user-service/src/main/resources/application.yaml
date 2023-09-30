@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: user-service
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+
 eureka:
   instance:
     # Eureka 관리자 페이지에서 보여지게 될 서비스의 이름
